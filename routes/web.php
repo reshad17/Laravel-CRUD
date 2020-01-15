@@ -24,3 +24,9 @@ Route::get('/products/{product}','ProductController@show')->name('products.show'
 Route::get('/products/{product}/edit','ProductController@edit')->name('products.edit');
 Route::PUT('/products/{product}','ProductController@update')->name('products.update');
 Route::post('/products','ProductController@store')->name('products.store');
+
+
+Route::get('/year','YearController@index')->name('year.index');
+Route::post('/year','YearController@store')->name('year.store');
+Route::get('/name','NameController@index')->name('name.index');
+Route::post('/name','NameController@store')->name('name.store');

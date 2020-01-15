@@ -13,7 +13,7 @@
     </div>
    
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
+        <div class="alert alert-success" id="msg">
             <p>{{ $message }}</p>
         </div>
     @endif
@@ -31,7 +31,7 @@
             <td>{{ $product->name }}</td>
             <td>{{ $product->detail }}</td>
             <td>
-                <form action="{{ route('products.destroy',$product->id) }}" method="POST" style="width: 50%;">
+                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
    
                     <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
     
@@ -49,4 +49,17 @@
   
     {!! $products->links() !!}
       
+ 
 @endsection
+
+
+
+@push('js')
+ <script>
+
+    $(document).ready (function(){
+    $(".alert").fadeTo(3000, 3000).slideUp(800);
+ });
+    
+</script>
+@endpush
