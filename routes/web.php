@@ -28,5 +28,24 @@ Route::post('/products','ProductController@store')->name('products.store');
 
 Route::get('/year','YearController@index')->name('year.index');
 Route::post('/year','YearController@store')->name('year.store');
+
 Route::get('/name','NameController@index')->name('name.index');
 Route::post('/name','NameController@store')->name('name.store');
+
+Route::get('/user','UserController@index')->name('user.index');
+Route::post('/user','UserController@store')->name('user.store');
+
+Route::get('/new','NewController@index')->name('new.index');
+Route::post('/new','NewController@store')->name('new.store');
+Route::get('/all/new','NewController@show')->name('new.show');
+Route::get('/all/new/{id}','NewController@edit')->name('user_edit');
+Route::get('/all/delete/{id}','NewController@destroy')->name('user_delete');
+
+Route::get('/vokkor','VokkorController@index')->name('vokkor.index');
+Route::post('/save','VokkorController@save')->name('vokkor.save');
+Route::get('/view','VokkorController@view')->name('vokkor.view');
+Route::get('/vokkor/edit/{id}','VokkorController@edit')->name('vokkor.edit');
+Route::get('/vokkor/delete/{id}','VokkorController@delete')->name('vokkor.delete');
+Route::PUT('/vokkor/update/{id}','VokkorController@update')->name('vokkor.update');
+
+
